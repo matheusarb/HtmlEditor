@@ -14,6 +14,7 @@ public static class Viewer
         Console.WriteLine("MODO VISUALIZAÇÃO\n-----------");
         Replace(text);
         Console.WriteLine("-----------");
+        Console.WriteLine("Pressione uma tecla para voltar ao menu");
         Console.ReadKey();
         Menu.Show();
     }
@@ -31,8 +32,8 @@ public static class Viewer
                 Console.Write(
                     words[i].Substring(
                         words[i].IndexOf('>') + 1,
-                        (words[i].IndexOf('<') - 1) - 
-                        words[i].LastIndexOf('>')
+                        ((words[i].LastIndexOf('<') - 1) - 
+                        words[i].IndexOf('>'))
                     )
                 );
                 Console.Write(" ");
@@ -41,7 +42,7 @@ public static class Viewer
             {
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.Write(words[i]);
-                Console.WriteLine(" ");
+                Console.Write(" ");
             }
         }
     }

@@ -23,10 +23,11 @@ public static class Editor
         {
             file.Append(Console.ReadLine());
             file.Append(Environment.NewLine);
-        } while (Console.ReadKey().Key != ConsoleKey.Escape);
+        }
+        while (Console.ReadKey().Key != ConsoleKey.Escape);
         
         Console.WriteLine("-----------");
-        Console.WriteLine(" Deseja salvar o arquivo? Digite \"S\" para Sim ou \"N\" para Não");
+        //Console.WriteLine(" Deseja salvar o arquivo? Digite \"S\" para Sim ou \"N\" para Não");
         
         Viewer.Show(file.ToString());
     }
